@@ -1,8 +1,8 @@
 import unittest
-from main import Calculator
+from main import Calculator, logger
 
 
-print("Running calculator tests...", Calculator)
+logger.info("Running calculator tests...")
 class TestCalculator(unittest.TestCase):
     def setUp(self):
         self.calc = Calculator()
@@ -33,6 +33,7 @@ class TestCalculator(unittest.TestCase):
     def test_addition_with_negative_numbers(self):
         result = self.calc.add(-2, -3)
         self.assertEqual(result, -5)
+
 
 if __name__ == '__main__':
     unittest.main()
