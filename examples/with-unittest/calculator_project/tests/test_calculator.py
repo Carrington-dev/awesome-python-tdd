@@ -34,6 +34,13 @@ class TestCalculator(unittest.TestCase):
         result = self.calc.add(-2, -3)
         self.assertEqual(result, -5)
 
+    def test_addition_with_floats(self):
+        result = self.calc.add(2.5, 3.5)
+        self.assertAlmostEqual(result, 6.0)
+
+    def test_addition_with_two_strings(self):
+        with self.assertRaises(TypeError):
+            self.calc.add("2", "3")
 
 if __name__ == '__main__':
     unittest.main()
