@@ -450,6 +450,55 @@ def test_api_call(monkeypatch):
 - Better error messages and debugging
 - Actively maintained
 
+Great! I'll help you get started with **nose2**, the Python testing framework.
+
+## Installing nose2
+
+First, install nose2 via pip:
+
+```bash
+pip install nose2
+```
+
+## Basic Test Structure
+
+nose2 automatically discovers and runs tests. Here's a simple example:## Running Tests
+
+Run your tests with:
+
+```bash
+# Run all tests in current directory
+nose2
+
+# Run with verbose output
+nose2 -v
+
+# Run specific test file
+nose2 test_calculator
+
+# Run specific test class
+nose2 test_calculator.TestCalculator
+
+# Run specific test method
+nose2 test_calculator.TestCalculator.test_addition
+```
+
+## Configuration File
+
+Create a `unittest.cfg` or `nose2.cfg` file for configuration:## Key Features
+
+**Test Discovery:** nose2 finds tests based on naming patterns:
+- Test files: `test*.py` or `*_test.py`
+- Test classes: classes that inherit from `unittest.TestCase`
+- Test functions: functions starting with `test_`
+- Test methods: methods starting with `test_`
+
+**Useful Plugins:**
+- `nose2.plugins.coverage` - Code coverage
+- `nose2.plugins.mp` - Multiprocess testing
+- `nose2.plugins.junitxml` - JUnit XML output
+
+
 ### Migration Path
 
 If moving from unittest to pytest:

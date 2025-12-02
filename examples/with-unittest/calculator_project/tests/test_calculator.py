@@ -41,6 +41,14 @@ class TestCalculator(unittest.TestCase):
     def test_addition_with_two_strings(self):
         with self.assertRaises(TypeError):
             self.calc.add("2", "3")
+    
+    def test_addition_with_string_and_number(self):
+        with self.assertRaises(TypeError):
+            self.calc.add("2", 3)
+    
+    def test_parameters_are_numbers(self):
+        with self.assertRaises(TypeError):
+            self.calc.add([], {})
 
 if __name__ == '__main__':
     unittest.main()
