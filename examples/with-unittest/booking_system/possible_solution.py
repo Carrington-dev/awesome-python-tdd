@@ -717,4 +717,3 @@ class TestRefundCalculation(unittest.TestCase):
         
         booking = self.system.book_room("John Doe", 101, check_in, check_out)
         
-        cancellation
