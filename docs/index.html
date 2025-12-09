@@ -830,6 +830,143 @@
         </div>
     </div>
 
+    <div class="container">
+
+        <section id="frameworks" class="section">
+                <h2 class="section-title">Testing Frameworks</h2>
+                <p class="section-subtitle">Comprehensive guides for Python's most popular testing frameworks</p>
+
+                <div class="framework-section">
+                    <div class="framework-card">
+                        <h3 class="framework-name"><i class="fas fa-vial"></i> unittest</h3>
+                        <p style="color: var(--gray); margin-bottom: 2rem;">Python's built-in testing framework. No installation required.</p>
+                        
+                        <h4 style="margin: 1.5rem 0 1rem;">Installation</h4>
+                        <div class="command-box">Built-in - no installation needed!</div>
+
+                        <h4 style="margin: 1.5rem 0 1rem;">Quick Start</h4>
+                        <div class="code-block">import unittest
+
+    class TestCalculator(unittest.TestCase):
+        def test_addition(self):
+            self.assertEqual(2 + 2, 4)
+
+    if __name__ == '__main__':
+        unittest.main()</div>
+
+                        <div class="command-box">python -m unittest test_module.py</div>
+                    </div>
+
+                    <div class="framework-card">
+                        <h3 class="framework-name"><i class="fas fa-nose"></i> nose2</h3>
+                        <p style="color: var(--gray); margin-bottom: 2rem;">Extended testing with automatic test discovery.</p>
+                        
+                        <div class="command-box">pip install nose2</div>
+                        <div class="command-box">nose2 -v</div>
+                    </div>
+
+                    <div class="framework-card">
+                        <h3 class="framework-name"><i class="fas fa-flask"></i> pytest (Recommended)</h3>
+                        <p style="color: var(--gray); margin-bottom: 2rem;">Modern, feature-rich testing framework - industry standard.</p>
+                        
+                        <div class="command-box">pip install pytest pytest-cov</div>
+
+                        <h4 style="margin: 1.5rem 0 1rem;">Quick Start</h4>
+                        <div class="code-block">def test_addition():
+        assert 2 + 2 == 4
+
+    def test_division():
+        assert 10 / 2 == 5</div>
+
+                        <div class="command-box">pytest -v --cov=mypackage</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="examples" class="section">
+                <h2 class="section-title">Example Projects</h2>
+                <p class="section-subtitle">Learn from complete, real-world examples</p>
+
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">📱</div>
+                            <h3 class="project-title">Calculator</h3>
+                        </div>
+                        <div class="project-body">
+                            <p style="color: var(--gray); margin-bottom: 1rem;">Basic calculator with comprehensive tests covering all operations and error handling.</p>
+                            <strong>Framework:</strong> unittest
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">🏨</div>
+                            <h3 class="project-title">Booking System</h3>
+                        </div>
+                        <div class="project-body">
+                            <p style="color: var(--gray); margin-bottom: 1rem;">Hotel room booking with availability checks, cancellations, and pricing.</p>
+                            <strong>Framework:</strong> unittest
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">🛒</div>
+                            <h3 class="project-title">Shopping Cart</h3>
+                        </div>
+                        <div class="project-body">
+                            <p style="color: var(--gray); margin-bottom: 1rem;">Shopping cart with multiple discount strategies (BOGO, percentage, fixed).</p>
+                            <strong>Framework:</strong> unittest
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">📁</div>
+                            <h3 class="project-title">Folder Lists</h3>
+                        </div>
+                        <div class="project-body">
+                            <p style="color: var(--gray); margin-bottom: 1rem;">File system navigation demonstrating TDD with I/O operations.</p>
+                            <strong>Framework:</strong> unittest
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Framework Comparison</h2>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Framework</th>
+                            <th>Best For</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>unittest</strong></td>
+                            <td>No dependencies, OOP structure, legacy code</td>
+                            <td>✅ Active</td>
+                        </tr>
+                        <tr>
+                            <td><strong>nose / nose2</strong></td>
+                            <td>Legacy projects, automatic discovery</td>
+                            <td>⚠️ Maintenance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>pytest</strong></td>
+                            <td>Modern projects, rich features, plugins</td>
+                            <td>🌟 Recommended</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    </div>
+
+
     <!-- TDD Cycle Section -->
     <div class="container">
         <section id="intro" class="section fade-in">
@@ -917,30 +1054,30 @@
         
 
 
-         <footer>
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <div class="logo" style="justify-content: center; margin-bottom: 2rem;">
-                    <i class="fas fa-flask"></i>
-                    <span>TDD Python</span>
-                </div>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Test-Driven Development with Python - MIT License</p>
-                
-                <div class="footer-social">
-                    <a href="https://github.com/Carrington-dev/test-driven-development-with-python" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/carrington-muleya" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-
-                <p style="margin-top: 2rem; opacity: 0.7;">© 2025 Carrington Muleya</p>
-            </div>
-        </footer>
-
+        
     </div>
+    <footer>
+       <div style="max-width: 1200px; margin: 0 auto;">
+           <div class="logo" style="justify-content: center; margin-bottom: 2rem;">
+               <i class="fas fa-flask"></i>
+               <span>TDD Python</span>
+           </div>
+           <p style="font-size: 1.1rem; margin-bottom: 2rem;">Test-Driven Development with Python - MIT License</p>
+           
+           <div class="footer-social">
+               <a href="https://github.com/Carrington-dev/test-driven-development-with-python" class="social-link">
+                   <i class="fab fa-github"></i>
+               </a>
+               <a href="https://www.linkedin.com/in/carrington-muleya" class="social-link">
+                   <i class="fab fa-linkedin"></i>
+               </a>
+               <a href="https://twitter.com" class="social-link">
+                   <i class="fab fa-twitter"></i>
+               </a>
+           </div>
+
+           <p style="margin-top: 2rem; opacity: 0.7;">© 2025 Carrington Muleya</p>
+       </div>
+   </footer>
 </body>
 </html>
