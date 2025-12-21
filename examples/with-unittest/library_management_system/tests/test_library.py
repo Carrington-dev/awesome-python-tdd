@@ -35,7 +35,7 @@ class TestLibrary(unittest.TestCase):
         self.assertNotEqual(self.library.librarians, None)
         self.assertTrue(type(self.library.librarians), dict)
 
-    def test_library_booking_checkout(self, reading_material):
+    def test_library_booking_checkout(self):
         """
         Docstring for test_library_booking_checkout
         
@@ -45,6 +45,20 @@ class TestLibrary(unittest.TestCase):
         reading_material = ReadingMaterialUnit("New Maths", "author", "isbn", "year_published")
         self.library.book_reading_material_unit(reading_material)
         self.assertTrue(1, len(self.library.get_reading_materials()))
+
+    def test_library_booking_checkout_collision(self):
+        """
+        Docstring for test_library_booking_checkout
+        
+        :param self: Description
+        :param reading_material: reading material
+        """
+        reading_material = ReadingMaterialUnit("New Maths", "author", "isbn", "year_published")
+        reading_material2 = ReadingMaterialUnit("New Maths", "author", "isbn", "year_published")
+        self.library.book_reading_material_unit(reading_material)
+        with self.assertRaises(Exception):
+            self.library.book_reading_material_unit(reading_material2)
+        # self.assertTrue(1, len(self.library.get_reading_materials()))
 
     def test_library_booking_system_cancellelation(self):
         """
