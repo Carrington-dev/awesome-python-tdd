@@ -55,5 +55,6 @@ class ReadingMaterialUnit:
         return f"ReadingMaterialUnit({self.title=}, {self.author=}, {self.isbn=})"
 
 reading_material_unit = ReadingMaterialUnit("New Maths", "author", "isbn", "year_published")
- 
-print(reading_material_unit)
+reading_material_unit_2 = reading_material_unit
+print(hex(id(reading_material_unit)))
+print(hex(id(reading_material_unit_2)))
