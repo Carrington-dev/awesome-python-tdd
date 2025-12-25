@@ -53,8 +53,19 @@ class ReadingMaterialUnit:
 
     def __str__(self):
         return f"ReadingMaterialUnit({self.title=}, {self.author=}, {self.isbn=})"
+    
+class Employee:
+    def __init__(self, name: str, profession: str, age: str, race: str = "african"):
+        self.name = name
+        self.age = age
+        self.profession = profession
+        self.race = race
 
+    def __str__(self):
+        return f"Employee({self.name=}, {self.profession=}, {self.age=})"
+    
 reading_material_unit = ReadingMaterialUnit("New Maths", "author", "isbn", "year_published")
 reading_material_unit_2 = reading_material_unit
+
 print(hex(id(reading_material_unit)))
 print(hex(id(reading_material_unit_2)))
