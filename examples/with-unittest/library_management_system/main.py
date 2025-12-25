@@ -64,8 +64,8 @@ class Employee:
     def __str__(self):
         return f"Employee({self.name=}, {self.profession=}, {self.age=})"
     
-reading_material_unit = ReadingMaterialUnit("New Maths", "author", "isbn", "year_published")
-reading_material_unit_2 = reading_material_unit
+# reading_material_unit = ReadingMaterialUnit("New Maths", "author", "isbn", "year_published")
+# reading_material_unit_2 = reading_material_unit
 
-print(hex(id(reading_material_unit)))
-print(hex(id(reading_material_unit_2)))
+# print(hex(id(reading_material_unit)))
+# print(hex(id(reading_material_unit_2)))
